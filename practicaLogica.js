@@ -4,6 +4,20 @@
 //Take note that the output for the films should add a small message
 //like: 'The film {film} is one of my favorites'.
 
+let nombreUsuario = prompt("¿Cuál es tu nombre?");
+console.log("Nombre de Usuario: " + nombreUsuario);
+
+let edadUsuario = prompt("¿Cuál es tu edad?");
+console.log("Edad: " + edadUsuario);
+
+let peliculasFavoritas = prompt("¿Cuales son tus peliculas favoritas?");
+console.log("Sus peliculas favoritas: " + peliculasFavoritas);
+
+let peliculasArr = peliculasFavoritas.split(",");
+console.log(peliculasArr);
+
+
+
 // Highest number
 //Write a program that asks for 10 numbers. 
 //Using logical operators and any other javascript functions/structures you've seen before, 
