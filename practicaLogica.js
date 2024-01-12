@@ -14,8 +14,8 @@ let peliculasFavoritas = prompt("¿Cuales son tus peliculas favoritas?");
 console.log("Sus peliculas favoritas: " + peliculasFavoritas);
 
 let peliculasArr = peliculasFavoritas.split(",");
-console.log(peliculasArr);
 
+console.log("¡" + peliculasArr[0] + " es una de mis favoritas!");
 
 
 // Highest number
@@ -23,11 +23,22 @@ console.log(peliculasArr);
 //Using logical operators and any other javascript functions/structures you've seen before, 
 //determine and output the highest of those numbers.
 
+let numerosUsuario = prompt("Ingresa 10 numeros: ");
+
+let numerosArr = numerosUsuario.split(",");
+
+let numeroMayor = Math.max(...numerosArr);
+console.log("El numero de mayor valor es: " + numeroMayor);
+
+
+
 // Alarm
 //Write a program that asks a user for the amount of seconds needed until an alarm (message)
 //is executed alongside a text to show once those seconds have passed in real time.
 
 // Result example: "Time for bed after 10 seconds".
+
+
 
 
 // Palindrome
