@@ -44,16 +44,12 @@ let segundosAlarma = prompt("Segundos necesarios hasta la alarma: ");
 //sacar los milisegudos
 //entonces debo convertir segundosAlarma a un dato int porque es un string , us parseInt para volverlo un int
 let segundosAlarmaint = parseInt(segundosAlarma);
-
 //ahora multiplico *1000(1s = 1000ms) y obtengo el numero de milisegundos (miliAlarma) 
 let miliAlarma = segundosAlarmaint * 1000
-
-
 //hago una funcion que hara que salte el mensaje
 function mensajeAlarma() {
     alert("Time for bed after: " + segundosAlarma + "seconds");
 }
-
 //Salta mensaje
 setTimeout(mensajeAlarma, miliAlarma);
 
@@ -63,6 +59,26 @@ setTimeout(mensajeAlarma, miliAlarma);
 // Palindrome
 // Write a program that prompts for a word or sentence (it can be capitalized, have spaces and punctuation).
 // Figure out if the sentence/word is a palindrome or not. Ignoring punctuation, spaces and capitalized letters.
+
+
+let fraseUsuario = prompt("Ingrese una palabra o frase: ");
+
+let fraseProcesada = fraseUsuario.replace(/[^\w\sáéíóúÁÉÍÓÚ]/g, "").toLowerCase();
+
+function esPalindromo (fraseProcesada) {
+    let fraseInvertida = fraseProcesada.split("").reverse().join("");
+    return fraseProcesada === fraseInvertida
+    
+}
+
+if (esPalindromo(fraseProcesada)) {
+    console.log("La frase es un palindromo")
+    
+} else {
+    console.log("La frase no es un palindromo")
+}
+
+
 
 // Factorial
 // Write a program that prompts for an intenger number n. Where  1 <= n. Solve this using recursion.
