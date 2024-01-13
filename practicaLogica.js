@@ -28,6 +28,7 @@ let numerosUsuario = prompt("Ingresa 10 numeros: ");
 let numerosArr = numerosUsuario.split(",");
 
 let numeroMayor = Math.max(...numerosArr);
+
 console.log("El numero de mayor valor es: " + numeroMayor);
 
 
@@ -35,8 +36,26 @@ console.log("El numero de mayor valor es: " + numeroMayor);
 // Alarm
 //Write a program that asks a user for the amount of seconds needed until an alarm (message)
 //is executed alongside a text to show once those seconds have passed in real time.
-
 // Result example: "Time for bed after 10 seconds".
+
+
+let segundosAlarma = prompt("Segundos necesarios hasta la alarma: ");
+
+//sacar los milisegudos
+//entonces debo convertir segundosAlarma a un dato int porque es un string , us parseInt para volverlo un int
+let segundosAlarmaint = parseInt(segundosAlarma);
+
+//ahora multiplico *1000(1s = 1000ms) y obtengo el numero de milisegundos (miliAlarma) 
+let miliAlarma = segundosAlarmaint * 1000
+
+
+//hago una funcion que hara que salte el mensaje
+function mensajeAlarma() {
+    alert("Time for bed after: " + segundosAlarma + "seconds");
+}
+
+//Salta mensaje
+setTimeout(mensajeAlarma, miliAlarma);
 
 
 
