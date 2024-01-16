@@ -68,7 +68,6 @@ let fraseProcesada = fraseUsuario.replace(/[^\w\sáéíóúÁÉÍÓÚ]/g, "").to
 function esPalindromo (fraseProcesada) {
     let fraseInvertida = fraseProcesada.split("").reverse().join("");
     return fraseProcesada === fraseInvertida
-    
 }
 
 if (esPalindromo(fraseProcesada)) {
@@ -80,8 +79,21 @@ if (esPalindromo(fraseProcesada)) {
 
 
 
+
 // Factorial
 // Write a program that prompts for an intenger number n. Where  1 <= n. Solve this using recursion.
+
+function Factorial (n) {
+    if (n === 1) {
+        return 1;
+    } else {
+        return n * Factorial (n-1);
+    }
+}
+
+    let numero = prompt("Ingrese un numero entero (mayor o igual a 1): ");
+    let resultado = Factorial (numero);
+    console.log("El factorial de " + numero + " es " + resultado);
 
 // Flat array
 // Write a program that takes the following nested matrix and flattens it (makes it a 1D array). 
