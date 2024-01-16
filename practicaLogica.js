@@ -95,9 +95,19 @@ function Factorial (n) {
     let resultado = Factorial (numero);
     console.log("El factorial de " + numero + " es " + resultado);
 
+
 // Flat array
 // Write a program that takes the following nested matrix and flattens it (makes it a 1D array). 
 //Use any type of algorithm you want like callbacks, recursion, etc...
-
 // let multiDimension = [1, [2, 3, [4, 5, [6]]]];
+
+let multiDimension = [1, [2, 3, [4, 5, [6]]]];
+
+let flatArray = multiDimension.flat(Infinity);
+
+console.log(flatArray)
+
+//flat(Infinity), aplana la matriz de manera recursiva,
+//lo que significa que se aplanarán todos los niveles de anidación,
+// sin importar cuántos haya.
  
